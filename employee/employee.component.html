@@ -1,0 +1,42 @@
+
+<a routerLink="/employee/list">List employee</a>
+
+<div class="row">
+    <div class="col-sm-1"></div>
+    <article class="col-sm-10">
+
+        <header>
+            <h2>Employee Table</h2>
+        </header>
+
+        <div class="widget-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" style="background-color: white">
+                    <thead>
+                    <tr >
+                        <th>Employee Code</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Manager</th>
+                        <th>Salary</th>
+                        <th>Work</th>
+                        <th>Date Start</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let employee of employees, index as i">
+                        <td>{{employee.employeeCode}}</td>
+                        <td>{{employee.name}}</td>
+                        <td>{{employee.department}}</td>
+                        <td>{{employee.manager}}</td>
+                        <td>{{employee.salary}}</td>
+                        <td>{{employee.work}}</td>
+                        <td>{{employee.dateStart}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </article>
+</div>
+
